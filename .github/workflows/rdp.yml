@@ -11,8 +11,6 @@ jobs:
         run: |
           $ErrorActionPreference = "Stop"
           
-          choco install googlechrome telegram -y --no-progress
-          
           Invoke-WebRequest "https://github.com/ekzhang/bore/releases/download/v0.5.1/bore-v0.5.1-x86_64-pc-windows-msvc.zip" -OutFile "bore.zip"
           Expand-Archive bore.zip -DestinationPath .
           
